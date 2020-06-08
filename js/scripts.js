@@ -5,13 +5,11 @@ $(document).ready(function() {
     let cream = $("#ice-cream").val();
     let animal = $("#animal").val();
     let array = [color, cream, animal];
-    
-    $("li.fave-list").append(
-      "<li>" + array[0] + "</li>",
-      "<li>" + array[1] + "</li>",
-      "<li>" + array[2] + "</li>"
-      );
 
+    array.forEach(function(element){
+      $("li.fave-list").append("<li>" + element + "</li>");
+    });
+    
     console.log(array);
     return array;
   });
